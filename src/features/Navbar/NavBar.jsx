@@ -1,0 +1,128 @@
+import { useEffect, useState } from 'react'
+import NavList from './NavList'
+import NavItem from './NavItem'
+import { devicesMax } from '../../styles/BreakPoint'
+
+import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai'
+import Sign from './SIgn'
+import styled, { css } from 'styled-components'
+import { Link } from 'react-router-dom'
+
+const NavStyle = styled.nav`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+
+  ${(props) =>
+    props.show &&
+    css`
+      display: flex;
+      align-items: flex-start;
+      flex-direction: column;
+    `}
+`
+
+const NavCollapse = styled.div`
+  flex: 1;
+  /* padding: 0 2rem; */
+  transition: all 0.3s ease;
+
+  ${(props) =>
+    props.show &&
+    css`
+      width: 100%;
+    `}
+`
+const NavBox = styled.div`
+  display: flex;
+  justify-content: space-between;
+  transition: all 0.3s ease;
+  ${(props) =>
+    props.show &&
+    css`
+      width: 100%;
+      flex-direction: column;
+    `}
+`
+const NavLogo = styled.div`
+  @media ${devicesMax.md} {
+    padding: 0 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+`
+
+function NavBar() {
+  const [showElement, setShowElement] = useState({
+    navbarNav: true,
+    hamburgerIcon: false,
+    closeIcon: false,
+    navOpened: false,
+  })
+
+  useEffect(() => {
+    window.onresize = () => {
+      let windowWidth = window.innerWidth
+
+      windowWidth > 850 &&
+        setShowElement({ navbarNav: true, hamburgerIcon: false })
+      windowWidth < 885 &&
+        setShowElement({ navbarNav: false, hamburgerIcon: true })
+    }
+  }, [])
+  const openNav = () => {
+    setShowElement({
+      navbarNav: true,
+      hamburgerIcon: false,
+      closeIcon: true,
+      navOpened: true,
+    })
+  }
+  const closeNav = () => {
+    setShowElement({
+      navbarNav: false,
+      hamburgerIcon: true,
+      closeIcon: false,
+      navOpened: false,
+    })
+  }
+
+  return (
+    <NavStyle show={showElement.navOpened}>
+      <NavLogo>
+        <a href="#" className="navbar-brand">
+          Narbert
+        </a>
+        {showElement.hamburgerIcon && <AiOutlineMenu onClick={openNav} />}
+        {showElement.closeIcon && <AiOutlineClose onClick={closeNav} />}
+      </NavLogo>
+      <NavCollapse show={showElement.navOpened}>
+        {showElement.navbarNav ? (
+          <NavBox show={showElement.navOpened}>
+            <NavItem show={showElement.navOpened}>
+              <NavList text={'home'} active="active" />
+              <NavList text={'event'} />
+              <NavList text={'about'} />
+              <NavList text={'contact'} />
+            </NavItem>
+            <Sign className="sign">
+              <Link className="link login" to="">
+                Login
+              </Link>
+              <Link className="link reg" to="">
+                Register
+              </Link>
+            </Sign>
+          </NavBox>
+        ) : null}
+      </NavCollapse>
+    </NavStyle>
+  )
+}
+
+export default NavBar
