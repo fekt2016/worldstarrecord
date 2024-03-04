@@ -7,7 +7,7 @@ const StyledLink = styled(NavLink)`
   text-transform: capitalize;
   padding: 0.15rem 0.35rem;
   border: 1px solid transparent;
-  color: var(--color-primary-900);
+  color: ${(props) => props.mycolor};
   ${(props) =>
     props.active === 'active' &&
     css`
@@ -20,10 +20,10 @@ const StyledLink = styled(NavLink)`
   }
 `
 
-function NavList({ text, active = '' }) {
+function NavList({ text, active = '', mycolor }) {
   return (
     <li>
-      <StyledLink active={active} to="#">
+      <StyledLink active={active} to="#" mycolor={mycolor}>
         {text}
       </StyledLink>
     </li>

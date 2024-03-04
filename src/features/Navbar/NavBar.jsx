@@ -105,7 +105,11 @@ function NavBar() {
         {showElement.navbarNav ? (
           <NavBox show={showElement.navOpened}>
             <NavItem show={showElement.navOpened}>
-              <NavList text={'home'} active="active" />
+              <NavList
+                text={'home'}
+                active="active"
+                mycolor="var(--color-primary-900)"
+              />
               <NavList text={'event'} />
               <NavList text={'about'} />
               <NavList text={'contact'} />
