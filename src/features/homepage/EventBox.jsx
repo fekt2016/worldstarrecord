@@ -11,7 +11,7 @@ const EventStyle = styled.div`
       rgba(0, 0, 0, 0.5),
       rgba(0, 0, 0, 0.7)
     ),
-    url('../../../public/world22.jpeg');
+    url('../../../world22.jpeg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
