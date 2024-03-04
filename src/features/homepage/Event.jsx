@@ -7,6 +7,7 @@ const StyledEvent = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
+  gap: 10px;
 `
 
 const LeftBox = styled.div`
