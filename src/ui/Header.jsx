@@ -15,7 +15,7 @@ const StyledHaeder = styled.header`
       rgba(0, 0, 0, 0.52),
       rgba(0, 0, 0, 0.73)
     ),
-    url('../../public/world3.jpeg');
+    url('../../world3.jpeg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

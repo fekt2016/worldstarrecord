@@ -157,9 +157,9 @@ function EventBox() {
           <H2Ni>music</H2Ni>
           <SpanParty>festival</SpanParty>
           <Gha>
-            <Img src="../../../public/flaggh.jpeg" alt="ghana" />
+            <Img src="../../../flaggh.jpeg" alt="ghana" />
             <span>Ghana canada international</span>
-            <Img src="../../../public/caflag.webp" alt="canada" />
+            <Img src="../../../caflag.webp" alt="canada" />
           </Gha>
         </EventName>
       </EventTop>
