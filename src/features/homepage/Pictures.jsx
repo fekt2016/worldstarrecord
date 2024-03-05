@@ -1,10 +1,9 @@
 import styled from 'styled-components'
 import Section from '../../ui/Section'
-import YouTube from 'react-youtube'
 
 const PicContainer = styled.div`
   background-color: red;
-  /* height: 50rem; */
+
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: auto;
@@ -16,9 +15,7 @@ const One = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
 `
-const Two = styled.div`
-  /* background-color: white; */
-`
+const Two = styled.div``
 const Three = styled.div`
   grid-column: 2/3;
   grid-row: 2/3;
@@ -35,7 +32,6 @@ const Four = styled.div`
   background-size: cover;
 `
 const Five = styled.div`
-  background-color: orangered;
   grid-column: 3/4;
 `
 const Six = styled.div`
@@ -70,7 +66,7 @@ function Pictures() {
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture full"
           ></iframe>
         </Five>
-        <Six>6</Six>
+        <Six></Six>
       </PicContainer>
     </Section>
   )
