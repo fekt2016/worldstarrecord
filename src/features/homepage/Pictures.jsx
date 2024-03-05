@@ -26,7 +26,7 @@ const Three = styled.div`
   background-size: cover;
 `
 const Four = styled.div`
-  background-image: url('../../../public/world3.jpeg');
+  background-image: url('../../../world3.jpeg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -38,7 +38,7 @@ const Six = styled.div`
   grid-column: 4/5;
   grid-row: 1/3;
 
-  background-image: url('../../../public/world5.jpeg');
+  background-image: url('../../../world5.jpeg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
