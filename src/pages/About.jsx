@@ -6,7 +6,7 @@ const StyledAbout = styled.div`
 function About() {
   return (
     <StyledAbout>
-      <img src="../../public/world12.jpeg" alt="star" />
+      <img src="../../world12.jpeg" alt="star" />
       <h1>world star record limited</h1>
       <p>
         World Star Records WSRis artiste management and events company which
@@ -24,7 +24,7 @@ function About() {
         Records is the fastest growing Multimedia Company in Ghana.
       </p>
 
-      <img src="../../public/world22.jpeg" alt="star" />
+      <img src="../../world22.jpeg" alt="star" />
     </StyledAbout>
   )
 }

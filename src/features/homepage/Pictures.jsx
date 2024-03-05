@@ -10,7 +10,7 @@ const PicContainer = styled.div`
 `
 const One = styled.div`
   grid-row: 1/3;
-  background-image: url('../../../public/world14.jpeg');
+  background-image: url('../../../world14.jpeg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -20,7 +20,7 @@ const Three = styled.div`
   grid-column: 2/3;
   grid-row: 2/3;
 
-  background-image: url('../../../public/world2.jpeg');
+  background-image: url('../../../world2.jpeg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
