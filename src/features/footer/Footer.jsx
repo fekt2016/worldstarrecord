@@ -5,8 +5,8 @@ import NavItem from '../Navbar/NavItem'
 const StyledFooter = styled.footer`
   background-color: var(--color-black-900);
   padding: 1rem;
-  border-radius: 100px;
-  margin: 1rem 6rem;
+  border-radius: 20px;
+  margin: 1rem 4rem;
   color: var(--color-white-100);
   height: 25rem;
 

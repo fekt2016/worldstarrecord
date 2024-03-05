@@ -20,10 +20,10 @@ const StyledLink = styled(NavLink)`
   }
 `
 
-function NavList({ text, active = '', mycolor }) {
+function NavList({ text, active = '', mycolor, to }) {
   return (
     <li>
-      <StyledLink active={active} to="#" mycolor={mycolor}>
+      <StyledLink active={active} to={to} mycolor={mycolor}>
         {text}
       </StyledLink>
     </li>

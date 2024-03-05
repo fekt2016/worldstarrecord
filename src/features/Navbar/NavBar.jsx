@@ -106,13 +106,14 @@ function NavBar() {
           <NavBox show={showElement.navOpened}>
             <NavItem show={showElement.navOpened}>
               <NavList
+                to="/"
                 text={'home'}
                 active="active"
                 mycolor="var(--color-primary-900)"
               />
-              <NavList text={'event'} />
-              <NavList text={'about'} />
-              <NavList text={'contact'} />
+              <NavList to="event" text={'event'} />
+              <NavList to="about" text={'about'} />
+              <NavList to="contact" text={'contact'} />
             </NavItem>
             <Sign className="sign">
               <Link className="link login" to="">
