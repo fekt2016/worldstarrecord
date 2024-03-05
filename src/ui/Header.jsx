@@ -71,9 +71,8 @@ function Header() {
       <Heading>World star Record</Heading>
       <TextBox>
         <P>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus
-          perferendis dignissimos sint dolores, minus praesentium sunt fugit id
-          voluptatum hic?
+          We create a platform for musicians across the world to participate and
+          connect to the international music fes tival
         </P>
 
         <Button>Book a ticket</Button>
