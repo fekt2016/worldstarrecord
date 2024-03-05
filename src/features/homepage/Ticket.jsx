@@ -3,7 +3,7 @@ import Section from '../../ui/Section'
 
 const StyledTicket = styled.div`
   /* height: 60rem; */
-  /* background-color: black; */
+  background-color: black;
   padding: 6rem;
   display: flex;
   justify-content: space-around;
