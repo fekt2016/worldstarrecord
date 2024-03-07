@@ -5,6 +5,8 @@ import Contact from './pages/Contact'
 import AppLayout from './pages/AppLayout'
 import HomePage from './pages/HomePage'
 import About from './pages/About'
+import Ticket from './pages/Ticket'
+import EventDetail from './pages/EventDetail'
 
 function App() {
   return (
@@ -17,6 +19,8 @@ function App() {
             <Route path="about" element={<About />} />
             <Route path="event" element={<Event />} />
             <Route path="contact" element={<Contact />} />
+            <Route path="ticket" element={<Ticket />} />
+            <Route path="ticket/:event" element={<EventDetail />} />
           </Route>
         </Routes>
       </BrowserRouter>

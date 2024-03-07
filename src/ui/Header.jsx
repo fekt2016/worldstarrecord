@@ -75,7 +75,7 @@ function Header() {
           connect to the international music fes tival
         </P>
 
-        <Button>Book a ticket</Button>
+        <Button>Book ticket</Button>
       </TextBox>
     </StyledHaeder>
   )

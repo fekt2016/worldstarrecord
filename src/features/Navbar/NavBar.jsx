@@ -116,11 +116,8 @@ function NavBar() {
               <NavList to="contact" text={'contact'} />
             </NavItem>
             <Sign className="sign">
-              <Link className="link login" to="">
-                Login
-              </Link>
-              <Link className="link reg" to="">
-                Register
+              <Link to="ticket" className="link reg">
+                Buy Ticket
               </Link>
             </Sign>
           </NavBox>
