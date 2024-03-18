@@ -1,6 +1,14 @@
 import styled from 'styled-components'
 import NavList from '../Navbar/NavList'
 import NavItem from '../Navbar/NavItem'
+import {
+  FaFacebook,
+  FaTwitter,
+  FaTiktok,
+  FaInstagram,
+  FaWhatsappSquare,
+  FaYoutube,
+} from 'react-icons/fa'
 
 const StyledFooter = styled.footer`
   background-color: var(--color-black-900);
@@ -16,6 +24,7 @@ const StyledFooter = styled.footer`
   align-items: center;
 `
 const NavBox = styled.div`
+  width: 70%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -24,20 +33,44 @@ const NavBox = styled.div`
 const P = styled.p`
   font-size: 1.2rem;
 `
+const Img = styled.img`
+  height: 5rem;
+`
+const Social = styled.div`
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+`
+const StyledNav = styled.nav`
+  width: 100%;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+`
 function Footer() {
   return (
     <StyledFooter>
-      {/* <img src="" alt="footerLogo" /> */}
-      <div>narbert</div>
+      <Img src="../../../LOGO.jpeg" alt="footerLogo" />
+      <Social>
+        <FaFacebook />
+        <FaTwitter />
+        <FaTiktok />
+        <FaInstagram />
+        <FaWhatsappSquare />
+        <FaYoutube />
+      </Social>
+
       <NavBox>
-        <nav>
+        <StyledNav>
           <NavItem>
             <NavList text={'home'} mycolor="var(--color-white-100)" />
             <NavList text={'event'} mycolor="var(--color-white-100)" />
             <NavList text={'about'} mycolor="var(--color-white-100)" />
             <NavList text={'contact'} mycolor="var(--color-white-100)" />
           </NavItem>
-        </nav>
+        </StyledNav>
         <P>&#169;copyright reserved 2024</P>
       </NavBox>
     </StyledFooter>

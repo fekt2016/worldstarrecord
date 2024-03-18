@@ -56,6 +56,9 @@ const NavLogo = styled.div`
     align-items: center;
   }
 `
+const Img = styled.img`
+  height: 5rem;
+`
 
 function NavBar() {
   const [showElement, setShowElement] = useState({
@@ -96,7 +99,7 @@ function NavBar() {
     <NavStyle show={showElement.navOpened}>
       <NavLogo>
         <a href="#" className="navbar-brand">
-          Narbert
+          <Img src="../../../LOGO.jpeg" alt="logo" />
         </a>
         {showElement.hamburgerIcon && <AiOutlineMenu onClick={openNav} />}
         {showElement.closeIcon && <AiOutlineClose onClick={closeNav} />}
@@ -116,9 +119,8 @@ function NavBar() {
               <NavList to="contact" text={'contact'} />
             </NavItem>
             <Sign className="sign">
-              <Link to="ticket" className="link reg">
-                Buy Ticket
-              </Link>
+              <Link className="link reg">Login</Link>
+              <Link className="link reg">Register</Link>
             </Sign>
           </NavBox>
         ) : null}

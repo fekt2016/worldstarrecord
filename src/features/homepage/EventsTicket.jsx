@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import Section from '../../ui/Section'
+import { Link } from 'react-router-dom'
 
 const StyledTicket = styled.div`
   /* height: 60rem; */
@@ -70,25 +71,27 @@ const Vip = styled.span`
   justify-content: center;
   align-items: center;
 `
-function Ticket() {
+function EventsTicket() {
   return (
     <Section>
       <StyledTicket>
-        <Card>
-          <Left>
-            <H4>
-              music & cultural <br />
-              festival
-            </H4>
-            <Vip>vip</Vip>
-          </Left>
-          <Right background="../../../ghana2.webp">
-            <Price>$500</Price>
-            <p>toronto canada</p>
-            <span>24th june 2024 </span>
-            <Button>buy now</Button>
-          </Right>
-        </Card>
+        <Link to={`ticket/ghana`}>
+          <Card>
+            <Left>
+              <H4>
+                music & cultural <br />
+                festival
+              </H4>
+              <Vip>vip</Vip>
+            </Left>
+            <Right background="../../../ghana2.webp">
+              <Price>$500</Price>
+              <p>toronto canada</p>
+              <span>24th june 2024 </span>
+              <Button>buy now</Button>
+            </Right>
+          </Card>
+        </Link>
         <Card>
           <Left>
             <H4>
@@ -108,4 +111,4 @@ function Ticket() {
   )
 }
 
-export default Ticket
+export default EventsTicket

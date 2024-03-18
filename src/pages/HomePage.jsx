@@ -1,5 +1,5 @@
 import Event from '../features/homepage/Event'
-import Ticket from '../features/homepage/Ticket'
+import EventsTicket from '../features/homepage/EventsTicket'
 import Header from '../ui/Header'
 import Pictures from '../features/homepage/Pictures'
 
@@ -8,7 +8,7 @@ function HomePage() {
     <>
       <Header />
       <Event />
-      <Ticket />
+      <EventsTicket />
       <Pictures />
     </>
   )

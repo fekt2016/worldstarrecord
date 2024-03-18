@@ -1,6 +1,6 @@
 import styled from 'styled-components'
-import Button from './Button'
 import { devicesMax } from '../styles/BreakPoint'
+import { Link } from 'react-router-dom'
 
 const StyledHaeder = styled.header`
   height: 50rem;
@@ -64,6 +64,15 @@ const P = styled.p`
     font-size: 1.4rem;
   }
 `
+const StyledLink = styled(Link)`
+  font-size: 3rem;
+  background-color: var(--color-primary-900);
+  border: none;
+  padding: 0.8rem 5rem;
+  border-radius: 100px;
+  color: var(--color-white-100);
+  text-transform: capitalize;
+`
 
 function Header() {
   return (
@@ -75,7 +84,7 @@ function Header() {
           connect to the international music fes tival
         </P>
 
-        <Button>Book ticket</Button>
+        <StyledLink to={`event`}>Book ticket</StyledLink>
       </TextBox>
     </StyledHaeder>
   )
