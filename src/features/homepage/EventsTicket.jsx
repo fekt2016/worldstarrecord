@@ -75,7 +75,7 @@ function EventsTicket() {
   return (
     <Section>
       <StyledTicket>
-        <Link to={`ticket/ghana`}>
+        <Link to={`event/ghana`}>
           <Card>
             <Left>
               <H4>
