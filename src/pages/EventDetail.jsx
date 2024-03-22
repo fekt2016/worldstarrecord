@@ -96,7 +96,7 @@ function EventDetail() {
       </Preview>
       <Description>
         <div>
-          <Img src="../../public/world7.jpeg" alt="" />
+          <Img src="../../world7.jpeg" alt="" />
         </div>
         <div>
           <H1>ghana-canada International </H1>

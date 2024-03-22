@@ -8,6 +8,8 @@ import Sign from './SIgn'
 import styled, { css } from 'styled-components'
 import { Link } from 'react-router-dom'
 
+import { FaShoppingCart } from 'react-icons/fa'
+
 const NavStyle = styled.nav`
   display: flex;
   justify-content: space-between;
@@ -27,7 +29,7 @@ const NavStyle = styled.nav`
 
 const NavCollapse = styled.div`
   flex: 1;
-  /* padding: 0 2rem; */
+
   transition: all 0.3s ease;
 
   ${(props) =>
@@ -39,6 +41,8 @@ const NavCollapse = styled.div`
 const NavBox = styled.div`
   display: flex;
   justify-content: space-between;
+  align-items: center;
+
   transition: all 0.3s ease;
   ${(props) =>
     props.show &&
@@ -57,7 +61,24 @@ const NavLogo = styled.div`
   }
 `
 const Img = styled.img`
-  height: 5rem;
+  height: 4rem;
+`
+const Cart = styled(Link)`
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+  margin-right: 2rem;
+`
+const IconBox = styled.div`
+  background-color: orangered;
+  padding: 1rem;
+  border-radius: 100%;
+  height: 4rem;
+  width: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `
 
 function NavBar() {
@@ -118,6 +139,12 @@ function NavBar() {
               <NavList to="about" text={'about'} />
               <NavList to="contact" text={'contact'} />
             </NavItem>
+            <Cart to={`dashboard/cart`}>
+              <IconBox>
+                <FaShoppingCart />
+              </IconBox>
+              cart
+            </Cart>
             <Sign className="sign">
               <Link className="link reg">Login</Link>
               <Link className="link reg">Register</Link>
