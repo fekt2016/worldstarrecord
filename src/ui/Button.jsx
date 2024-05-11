@@ -28,6 +28,10 @@ const variation = {
     border: 1px solid var(--color-primary-900);
     color: var(--color-primary-900);
     border-radius: 5px;
+
+    &:hover {
+      font-size: 1.5rem;
+    }
   `,
 }
 

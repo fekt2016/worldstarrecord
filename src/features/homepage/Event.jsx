@@ -10,21 +10,21 @@ const StyledEvent = styled.div`
   gap: 10px;
 `
 
-const LeftBox = styled.div`
-  display: flex;
-  gap: 10px;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-`
-const CenterBox = styled.div``
-const RightBox = styled.div`
-  display: flex;
-  gap: 10px;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-`
+// const LeftBox = styled.div`
+//   display: flex;
+//   gap: 10px;
+//   flex-direction: column;
+//   justify-content: space-between;
+//   align-items: center;
+// `
+// const CenterBox = styled.div``
+// const RightBox = styled.div`
+//   display: flex;
+//   gap: 10px;
+//   flex-direction: column;
+//   justify-content: space-between;
+//   align-items: center;
+// `
 
 // const EventBox = styled.div``
 
@@ -32,15 +32,7 @@ function Event() {
   return (
     <Section>
       <StyledEvent>
-        <LeftBox>
-          <EventBox />
-        </LeftBox>
-        <CenterBox>
-          <EventBox />
-        </CenterBox>
-        <RightBox>
-          <EventBox />
-        </RightBox>
+        <EventBox />
       </StyledEvent>
     </Section>
   )

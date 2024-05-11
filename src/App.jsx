@@ -5,10 +5,10 @@ import Contact from './pages/Contact'
 import AppLayout from './pages/AppLayout'
 import HomePage from './pages/HomePage'
 import About from './pages/About'
-import EventDetail from './pages/EventDetail'
-import Checkout from './pages/Checkout'
-import Dashboard from './pages/Dashboard'
-import Cart from './pages/Cart'
+// import EventDetail from './pages/EventDetail'
+// import Checkout from './pages/Checkout'
+// import Dashboard from './pages/Dashboard'
+// import Cart from './pages/ShoppingCart'
 
 function App() {
   return (
@@ -21,12 +21,11 @@ function App() {
             <Route path="about" element={<About />} />
             <Route path="event" element={<Event />} />
             <Route path="contact" element={<Contact />} />
-
-            <Route path="event/:event" element={<EventDetail />} />
-            <Route path="event/:event/checkout" element={<Checkout />} />
-            <Route path="dashboard" element={<Dashboard />}>
+            {/* <Route path="event/:event" element={<EventDetail />} /> */}
+            {/* <Route path="event/:event/checkout" element={<Checkout />} /> */}
+            {/* <Route path="dashboard" element={<Dashboard />}>
               <Route path="cart" element={<Cart />} />
-            </Route>
+            </Route> */}
           </Route>
         </Routes>
       </BrowserRouter>

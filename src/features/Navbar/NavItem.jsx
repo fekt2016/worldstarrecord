@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components'
 
-const NavList = styled.ul`
-  flex: 4;
+const NavItem = styled.ul`
+  flex: 3;
   display: flex;
   justify-content: space-evenly;
   transition: all 0.3s ease;
@@ -18,4 +18,4 @@ const NavList = styled.ul`
     `}
 `
 
-export default NavList
+export default NavItem

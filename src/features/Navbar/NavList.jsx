@@ -7,12 +7,16 @@ const StyledLink = styled(NavLink)`
   text-transform: capitalize;
   padding: 0.15rem 0.35rem;
   border: 1px solid transparent;
+  font-size: 2rem;
+  font-family: 'Passion One', sans-serif;
+  font-weight: 700;
+  font-style: normal;
+
   color: ${(props) => props.mycolor};
   ${(props) =>
     props.active === 'active' &&
     css`
-      background-color: var(--color-primary-900);
-      color: #fff;
+      color: var(--color-primary-900);
       transition: all 0.2s ease;
     `}
   &:hover {

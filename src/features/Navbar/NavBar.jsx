@@ -4,15 +4,15 @@ import NavItem from './NavItem'
 import { devicesMax } from '../../styles/BreakPoint'
 
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai'
-import Sign from './SIgn'
+// import Sign from './SIgn'
 import styled, { css } from 'styled-components'
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
 
-import { FaShoppingCart } from 'react-icons/fa'
+// import { FaShoppingCart } from 'react-icons/fa'
 
 const NavStyle = styled.nav`
   display: flex;
-  justify-content: space-between;
+  width: 100vw;
   align-items: center;
   padding: 2rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
@@ -52,34 +52,36 @@ const NavBox = styled.div`
     `}
 `
 const NavLogo = styled.div`
+  flex: 1;
   @media ${devicesMax.md} {
     padding: 0 2rem;
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex: none;
   }
 `
 const Img = styled.img`
   height: 4rem;
 `
-const Cart = styled(Link)`
-  display: flex;
-  gap: 5px;
-  justify-content: center;
-  align-items: center;
-  margin-right: 2rem;
-`
-const IconBox = styled.div`
-  background-color: orangered;
-  padding: 1rem;
-  border-radius: 100%;
-  height: 4rem;
-  width: 4rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`
+// const Cart = styled(Link)`
+//   display: flex;
+//   gap: 5px;
+//   justify-content: center;
+//   align-items: center;
+//   margin-right: 2rem;
+// `
+// const IconBox = styled.div`
+//   background-color: orangered;
+//   padding: 1rem;
+//   border-radius: 100%;
+//   height: 4rem;
+//   width: 4rem;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// `
 
 function NavBar() {
   const [showElement, setShowElement] = useState({
@@ -115,6 +117,14 @@ function NavBar() {
       navOpened: false,
     })
   }
+  const MenuIcon = styled(AiOutlineMenu)`
+    font-size: 2.3rem;
+    cursor: pointer;
+  `
+  const CloseIcon = styled(AiOutlineClose)`
+    font-size: 2.3rem;
+    cursor: pointer;
+  `
 
   return (
     <NavStyle show={showElement.navOpened}>
@@ -122,8 +132,8 @@ function NavBar() {
         <a href="#" className="navbar-brand">
           <Img src="../../../LOGO.jpeg" alt="logo" />
         </a>
-        {showElement.hamburgerIcon && <AiOutlineMenu onClick={openNav} />}
-        {showElement.closeIcon && <AiOutlineClose onClick={closeNav} />}
+        {showElement.hamburgerIcon && <MenuIcon onClick={openNav} />}
+        {showElement.closeIcon && <CloseIcon onClick={closeNav} />}
       </NavLogo>
       <NavCollapse show={showElement.navOpened}>
         {showElement.navbarNav ? (
@@ -139,16 +149,10 @@ function NavBar() {
               <NavList to="about" text={'about'} />
               <NavList to="contact" text={'contact'} />
             </NavItem>
-            <Cart to={`dashboard/cart`}>
-              <IconBox>
-                <FaShoppingCart />
-              </IconBox>
-              cart
-            </Cart>
-            <Sign className="sign">
+            {/* <Sign className="sign">
               <Link className="link reg">Login</Link>
               <Link className="link reg">Register</Link>
-            </Sign>
+            </Sign> */}
           </NavBox>
         ) : null}
       </NavCollapse>

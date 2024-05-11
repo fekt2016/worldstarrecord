@@ -30,15 +30,29 @@ const GlobalStyles = createGlobalStyle`:root {
   --color-grey-800: #1f2937;
   --color-grey-900: #111827;
 
-  --color-facebook-900: #3b5998;
+  /* --color-facebook-900: #3b5998;
   --color-twitter-900:#1DA1F2;
   --color-youtube-900:#CD201F;
   --color-tiktok-900:#00f2ea;
 
   --color-facebook-500: #4060a4;
+  --color-twitter-500:#6DC2F7;
+  --color-youtube-500:#EB7978;
+  --color-tiktok-500:#7bfffb; */
+
+  --color-facebook-900: #3b5998;
+  --color-twitter-900:#1DA1F2;
+  --color-youtube-900:#CD201F;
+  --color-tiktok-900:#00f2ea;
+  --color-instragram-900:#d62976;
+  --color-whatsapp-900:#25d366;
+
+  --color-facebook-500: #4060a4;
   --color-twitter-500:#8ED0F8;
   --color-youtube-500:#EB7978;
   --color-tiktok-500:#7bfffb;
+  --color-instragram-500:#e470a4;
+  --color-whatsapp-500:#68e597;
 
 
 

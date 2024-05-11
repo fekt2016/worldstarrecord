@@ -1,6 +1,27 @@
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
-import TicketCard from '../features/ticket/TicketCard'
+// import TicketCard from '../features/ticket/TicketCard'
+
+// const ticket = [
+//   {
+//     id: 1,
+//     event: 'ghana-canada international festival music',
+//     date: '24th April, 2024',
+//     venue: '(Kipling/belfield), Toronto, Ontario, M9WIGI, Canada',
+//   },
+//   {
+//     id: 2,
+//     event: 'ghana-canada international festival music',
+//     date: '24th April, 2024',
+//     venue: '(Kipling/belfield), Toronto, Ontario, M9WIGI, Canada',
+//   },
+//   {
+//     id: 3,
+//     event: 'ghana-canada international festival music',
+//     date: '24th April, 2024',
+//     venue: '(Kipling/belfield), Toronto, Ontario, M9WIGI, Canada',
+//   },
+// ]
 
 const EventBox = styled.div`
   padding: 8rem;
@@ -40,12 +61,10 @@ function Event() {
   return (
     <EventBox>
       <HeadingBox>
-        <span> events Ticket</span>
+        <span> events </span>
       </HeadingBox>
       <CardBox>
-        <Link to={`ghana`}>
-          <TicketCard />
-        </Link>
+        <Link to={`ghana`}>{/* <TicketCard /> */}</Link>
       </CardBox>
     </EventBox>
   )

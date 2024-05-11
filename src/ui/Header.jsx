@@ -1,14 +1,9 @@
 import styled from 'styled-components'
 import { devicesMax } from '../styles/BreakPoint'
-import { Link } from 'react-router-dom'
 
-const StyledHaeder = styled.header`
-  height: 50rem;
+const StyledHeader = styled.header`
+  height: 90vh;
   width: 100vw;
-  @media ${devicesMax.md} {
-    height: 60rem;
-    padding-top: 8rem;
-  }
 
   background-image: linear-gradient(
       to top,
@@ -22,8 +17,13 @@ const StyledHaeder = styled.header`
 
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
+
+  @media ${devicesMax.md} {
+    height: 70vh;
+    padding-top: 8rem;
+  }
 `
 const Heading = styled.h1`
   font-size: 12rem;
@@ -55,7 +55,7 @@ const TextBox = styled.div`
   }
 `
 const P = styled.p`
-  font-size: 2rem;
+  font-size: 1.8rem;
   color: var(--color-white-100);
   text-align: center;
   margin-bottom: 8rem;
@@ -64,29 +64,49 @@ const P = styled.p`
     font-size: 1.4rem;
   }
 `
-const StyledLink = styled(Link)`
-  font-size: 3rem;
-  background-color: var(--color-primary-900);
-  border: none;
-  padding: 0.8rem 5rem;
-  border-radius: 100px;
-  color: var(--color-white-100);
-  text-transform: capitalize;
+
+const StyledWorld = styled.span`
+  color: red;
+  text-shadow: 0 0 2rem;
+  transition: all 0.4s;
+  &:hover {
+    text-shadow: 0 1rem 4rem;
+  }
+`
+
+const StyledRecord = styled.span`
+  color: green;
+  text-shadow: 0 0 2rem;
+  transition: all 0.4s;
+  &:hover {
+    text-shadow: 0 1rem 4rem;
+  }
+`
+const StyledStar = styled.span`
+  color: gold;
+  text-shadow: 0 0 2rem;
+  padding: 2rem;
+  transition: all 0.4s;
+  &:hover {
+    text-shadow: 0 1rem 4rem;
+  }
 `
 
 function Header() {
   return (
-    <StyledHaeder>
-      <Heading>World star Record</Heading>
+    <StyledHeader>
+      <Heading>
+        <StyledWorld>World</StyledWorld>
+        <StyledStar>star</StyledStar>
+        <StyledRecord>Record</StyledRecord>
+      </Heading>
       <TextBox>
         <P>
           We create a platform for musicians across the world to participate and
-          connect to the international music fes tival
+          connect to the international music festival
         </P>
-
-        <StyledLink to={`event`}>Book ticket</StyledLink>
       </TextBox>
-    </StyledHaeder>
+    </StyledHeader>
   )
 }
 
