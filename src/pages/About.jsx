@@ -62,7 +62,7 @@ function About() {
       <H1>world star records</H1>
       <AboutSection>
         <ImgBox>
-          <Img src="../../public/world3.jpeg" alt="star" />
+          <Img src="../../world3.jpeg" alt="star" />
         </ImgBox>
         <TextBox>
           <H2>Years of experience </H2>
@@ -92,7 +92,7 @@ function About() {
           </P>
         </TextBox>
         <ImgBox>
-          <Img src="../../public/world4.jpeg" alt="star" />
+          <Img src="../../world4.jpeg" alt="star" />
         </ImgBox>
       </AboutSection>
     </StyledAbout>

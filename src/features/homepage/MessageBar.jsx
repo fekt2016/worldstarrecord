@@ -90,10 +90,7 @@ function MessageBar() {
           </P>
         </TextBox>
         <ImgBox>
-          <Img
-            src="../../../public/world7.jpeg"
-            alt="music festival from accra"
-          />
+          <Img src="../../../world7.jpeg" alt="music festival from accra" />
         </ImgBox>
       </StyledBar>
     </Section>
