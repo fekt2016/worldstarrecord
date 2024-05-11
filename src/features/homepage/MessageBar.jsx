@@ -3,15 +3,11 @@ import Section from '../../ui/Section'
 import { devicesMax } from '../../styles/BreakPoint'
 
 const StyledBar = styled.div`
-  /* width: 100%; */
   display: flex;
-  margin: 0 5rem;
-  padding: 5rem;
 
   @media ${devicesMax.md} {
     flex-direction: column;
     gap: 30px;
-    margin: 0 3rem;
     padding: 3rem;
   }
 `
@@ -29,8 +25,6 @@ const TextBox = styled.div`
   background-size: cover;
 
   @media ${devicesMax.md} {
-    /* padding: 4rem; */
-    /* height: 40rem; */
     flex-basis: 30rem;
   }
 `
@@ -80,7 +74,7 @@ const P = styled.p`
 `
 function MessageBar() {
   return (
-    <Section>
+    <Section type="msg">
       <StyledBar>
         <TextBox>
           <H2>Worlds Largest Musical Event</H2>
