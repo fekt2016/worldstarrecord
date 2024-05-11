@@ -9,15 +9,16 @@ const Section = styled.section`
     props.type === 'event' &&
     css`
       padding: 2rem 20rem;
+
       @media ${devicesMax.md} {
-        padding: 2rem 6rem;
+        padding: 2rem 2rem;
       }
     `}
   ${(props) =>
     props.type === 'video' &&
     css`
       height: 80rem;
-      padding: 0 4rem;
+      padding: 0 2rem;
     `}
 `
 

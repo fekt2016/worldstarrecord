@@ -23,7 +23,7 @@ const TextBox = styled.div`
   align-items: center;
   padding: 4rem;
   padding-bottom: 3rem;
-  background-image: url('../../../public/Papoose 1.png');
+  background-image: url('../../../Papoose 1.png');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
