@@ -53,6 +53,7 @@ const GlobalStyles = createGlobalStyle`:root {
   --color-tiktok-500:#7bfffb;
   --color-instragram-500:#e470a4;
   --color-whatsapp-500:#68e597;
+  --color-gold-900: #FFD700;
 
 
 

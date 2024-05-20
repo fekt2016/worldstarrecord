@@ -1,6 +1,8 @@
 import styled from 'styled-components'
 import { devicesMax } from '../styles/BreakPoint'
 
+import Sponsor from '../features/homepage/Sponsor'
+
 const StyledAbout = styled.div`
   padding: 8rem;
 `
@@ -37,29 +39,31 @@ const Img = styled.img`
 const H1 = styled.h1`
   font-size: 6rem;
   text-transform: capitalize;
-  background: linear-gradient(to right, red, yellow, green);
+  /* background: -webkit-linear-gradient(to right, red, yellow, green);
   background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent; */
   text-align: center;
   margin-bottom: 3rem;
 `
 const H2 = styled.h1`
   font-size: 4rem;
   text-transform: capitalize;
-  background: linear-gradient(to right, red, yellow, green);
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  /* background: -webkit-linear-gradient(to right, red, yellow, green); */
+  /* background-clip: text;
+  -webkit-text-fill-color: transparent; */
   text-align: center;
   margin-bottom: 3rem;
+  color: var(--color-grey-400);
 `
 const P = styled.p`
   text-align: start;
   hyphens: none;
+  color: var(--color-grey-500);
 `
 function About() {
   return (
     <StyledAbout>
-      <H1>world star records</H1>
+      <H1>world star records Ltd</H1>
       <AboutSection>
         <ImgBox>
           <Img src="../../world3.jpeg" alt="star" />
@@ -74,11 +78,6 @@ function About() {
             Records organizes musical concert to promote peace during election
             year and support the emerging artist.
           </P>
-        </TextBox>
-      </AboutSection>
-      <AboutSection>
-        <TextBox>
-          <H2>Achievement</H2>
           <P>
             Our Achievement Within a period of two years, the Company has been
             able to produce 18 different artistes from different parts of the
@@ -91,10 +90,56 @@ function About() {
             Ghana.
           </P>
         </TextBox>
+      </AboutSection>
+      <AboutSection>
+        <TextBox>
+          <H2>Vision</H2>
+          <P>
+            To deliver quality and efficient services to Ghana with high level
+            of integrity through music and culture.
+          </P>
+          <P>
+            To create a peaceful environment for elections through musical
+            concert throughout Ghana with international standard.
+          </P>
+          <P>To assist and mentor upcoming young artistes.</P>
+          <P>
+            To promote local music and international festival collaboration with
+            Folk Music Ontario, Canada and other stakeholders in an annual
+            program in Ghana.
+          </P>
+        </TextBox>
         <ImgBox>
           <Img src="../../world4.jpeg" alt="star" />
         </ImgBox>
       </AboutSection>
+      <AboutSection>
+        <ImgBox>
+          <Img src="../../world4.jpeg" alt="star" />
+        </ImgBox>
+        <TextBox>
+          <H2>Goal</H2>
+          <P>
+            To create a platform for musicians across the world to participate
+            and connect to the international music festival.
+          </P>
+        </TextBox>
+      </AboutSection>
+      <AboutSection>
+        <TextBox>
+          <H2>Mission</H2>
+          <P>
+            To secure the means and resources to support and promote the
+            development of talented artiste collaborating with stakeholders to
+            promote peace through musical concert.
+          </P>
+        </TextBox>
+        <ImgBox>
+          <Img src="../../world4.jpeg" alt="star" />
+        </ImgBox>
+      </AboutSection>
+
+      <Sponsor />
     </StyledAbout>
   )
 }

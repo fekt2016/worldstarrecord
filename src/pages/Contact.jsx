@@ -25,21 +25,30 @@ function Contact() {
     <StyledContact>
       <H1>contact Info</H1>
       <P>
-        <strong>Company Name :</strong> World Star Records Ltd
+        <strong>Company Name :</strong>
+        <br /> World Star Records Limited
       </P>
       <P>
-        <strong>Postal Address: </strong>P O Box AN 6676 Accra Norh Ghana
+        <strong>Postal Address: </strong>
+        <br />P O Box AN 6676 Accra North Ghana
       </P>
       <P>
-        <strong>Call:</strong> 00233546009191
+        <strong>Call:</strong>
+        <br /> 00233546009191
       </P>
       <P>
-        <strong>email: </strong>worldstarrecords626@gmail.com
+        <strong>email: </strong>
+        <br />
+        info@worldstargh.com
+        <br /> worldstarrecords626@gmail.com
+        <br />
+        ernestdjan@worldstargh.com
+        <br />
       </P>
 
       <Ps>
-        Information Feel free to contact us anytime for more information about
-        all events
+        For more information, Feel free to contact us anytime for more
+        information about all events
       </Ps>
     </StyledContact>
   )

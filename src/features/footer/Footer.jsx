@@ -11,12 +11,13 @@ import {
 } from 'react-icons/fa'
 
 const StyledFooter = styled.footer`
-  background-color: var(--color-black-900);
+  background-color: var(--color-grey-100);
   padding: 1rem;
   border-radius: 20px;
-  margin: 1rem 4rem;
+  margin: 1rem 1rem;
   color: var(--color-white-100);
   height: 25rem;
+  border: 2px solid var(--color-black-900);
 
   display: flex;
   flex-direction: column;
@@ -115,10 +116,10 @@ function Footer() {
       <NavBox>
         <StyledNav>
           <NavItem>
-            <NavList text={'home'} mycolor="var(--color-white-100)" />
-            <NavList text={'event'} mycolor="var(--color-white-100)" />
-            <NavList text={'about'} mycolor="var(--color-white-100)" />
-            <NavList text={'contact'} mycolor="var(--color-white-100)" />
+            <NavList text={'home'} mycolor="var(--color-black-900)" />
+            <NavList text={'event'} mycolor="var(--color-black-900)" />
+            <NavList text={'about'} mycolor="var(--color-black-900)" />
+            <NavList text={'contact'} mycolor="var(--color-black-900)" />
           </NavItem>
         </StyledNav>
         {/* <NavItem>

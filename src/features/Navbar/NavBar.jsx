@@ -1,3 +1,4 @@
+/* eslint react/prop-types: 0 */
 import { useEffect, useState } from 'react'
 import NavList from './NavList'
 import NavItem from './NavItem'
@@ -65,25 +66,15 @@ const NavLogo = styled.div`
 const Img = styled.img`
   height: 4rem;
 `
-// const Cart = styled(Link)`
-//   display: flex;
-//   gap: 5px;
-//   justify-content: center;
-//   align-items: center;
-//   margin-right: 2rem;
-// `
-// const IconBox = styled.div`
-//   background-color: orangered;
-//   padding: 1rem;
-//   border-radius: 100%;
-//   height: 4rem;
-//   width: 4rem;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-// `
-
-function NavBar() {
+const MenuIcon = styled(AiOutlineMenu)`
+  font-size: 2.3rem;
+  cursor: pointer;
+`
+const CloseIcon = styled(AiOutlineClose)`
+  font-size: 2.3rem;
+  cursor: pointer;
+`
+function NavBar({ type }) {
   const [showElement, setShowElement] = useState({
     navbarNav: true,
     hamburgerIcon: false,
@@ -117,14 +108,6 @@ function NavBar() {
       navOpened: false,
     })
   }
-  const MenuIcon = styled(AiOutlineMenu)`
-    font-size: 2.3rem;
-    cursor: pointer;
-  `
-  const CloseIcon = styled(AiOutlineClose)`
-    font-size: 2.3rem;
-    cursor: pointer;
-  `
 
   return (
     <NavStyle show={showElement.navOpened}>
@@ -139,20 +122,28 @@ function NavBar() {
         {showElement.navbarNav ? (
           <NavBox show={showElement.navOpened}>
             <NavItem show={showElement.navOpened}>
+              <NavList to="/" text={'home'} active="active" />
               <NavList
-                to="/"
-                text={'home'}
-                active="active"
-                mycolor="var(--color-primary-900)"
+                to="about"
+                text={'about us'}
+                mycolor={type === 'home' ? 'var(--color-white-100)' : 'black'}
               />
-              <NavList to="event" text={'event'} />
-              <NavList to="about" text={'about'} />
-              <NavList to="contact" text={'contact'} />
+              <NavList
+                to="event"
+                text={'events'}
+                mycolor={type === 'home' ? 'var(--color-white-100)' : 'black'}
+              />
+              <NavList
+                to="gallery"
+                text={'gallery'}
+                mycolor={type === 'home' ? 'var(--color-white-100)' : 'black'}
+              />
+              <NavList
+                to="contact"
+                text={'contact'}
+                mycolor={type === 'home' ? 'var(--color-white-100)' : 'black'}
+              />
             </NavItem>
-            {/* <Sign className="sign">
-              <Link className="link reg">Login</Link>
-              <Link className="link reg">Register</Link>
-            </Sign> */}
           </NavBox>
         ) : null}
       </NavCollapse>

@@ -1,12 +1,12 @@
 import { Outlet } from 'react-router-dom'
-import NavBar from '../features/Navbar/NavBar'
 import Main from '../ui/Main'
 import Footer from '../features/footer/Footer'
+import Header from '../ui/Header'
 
 function AppLayout() {
   return (
     <>
-      <NavBar />
+      <Header />
       <Main>
         <Outlet />
       </Main>

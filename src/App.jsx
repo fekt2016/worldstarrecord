@@ -5,6 +5,7 @@ import Contact from './pages/Contact'
 import AppLayout from './pages/AppLayout'
 import HomePage from './pages/HomePage'
 import About from './pages/About'
+import Gallery from './pages/Gallery'
 // import EventDetail from './pages/EventDetail'
 // import Checkout from './pages/Checkout'
 // import Dashboard from './pages/Dashboard'
@@ -16,12 +17,12 @@ function App() {
       <GlobalStyles />
       <BrowserRouter>
         <Routes>
+          <Route index element={<HomePage />} />
           <Route element={<AppLayout />}>
-            <Route index element={<HomePage />} />
             <Route path="about" element={<About />} />
             <Route path="event" element={<Event />} />
             <Route path="contact" element={<Contact />} />
-            {/* <Route path="event/:event" element={<EventDetail />} /> */}
+            <Route path="gallery" element={<Gallery />} />
             {/* <Route path="event/:event/checkout" element={<Checkout />} /> */}
             {/* <Route path="dashboard" element={<Dashboard />}>
               <Route path="cart" element={<Cart />} />

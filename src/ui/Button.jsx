@@ -13,15 +13,16 @@ const sizes = {
 }
 const variation = {
   primary: css`
-    background-color: var(--color-primary-900);
+    background-color: var(--color-gold-900);
     color: var(--color-white-100);
     &:hover {
       transform: scale(1.1);
     }
   `,
   secoundary: css`
-    background-color: var(--color-white-100);
-    border: 1px solid var(--color-primary-900);
+    background-color: transparent;
+    border: 1px solid var(--color-gold-900);
+    color: var(--color-gold-900);
   `,
   tertiary: css`
     background-color: var(--color-white-100);
@@ -37,9 +38,9 @@ const variation = {
 
 const Button = styled.button`
   border: none;
-  border-radius: 100px;
+  border-radius: 7px;
   text-transform: capitalize;
-  padding: 0.8rem 1.5rem;
+  padding: 1rem 2rem;
   transition: all 0.4s;
 
   ${(props) => sizes[props.size]}
