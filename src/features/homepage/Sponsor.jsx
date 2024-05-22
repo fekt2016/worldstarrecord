@@ -29,66 +29,54 @@ function Sponsor() {
         <StyledSpon>
           <H2>sponsors</H2>
           <ImgBox>
-            <Img
-              src="../../../public/AA Trust Travels.png"
-              alt="sponsors logo"
-            />
+            <Img src="../../../AA Trust Travels.png" alt="sponsors logo" />
             <Img src="../../../Karim & Brother's.png" alt="sponsors logo" />
             <Img src="../../../Geniuspring.png" alt="sponsors logo" />
             <Img src="../../../Shoe.png" alt="sponsors logo" />
             <Img src="../../../Toloba.png" alt="sponsors logo" />
-            <Img src="../../../public/Lawson Herbal.png" alt="sponsors logo" />
+            <Img src="../../../Lawson Herbal.png" alt="sponsors logo" />
             <Img src="../../../V-Bells.png" alt="sponsors logo" />
           </ImgBox>
         </StyledSpon>
         <StyledSpon>
           <H2>Media Partners</H2>
           <ImgBox>
-            <Img src="../../../public/Angel Tv.png" alt="sponsors logo" />
-            <Img src="../../../public/Lawson Herbal.png" alt="sponsors logo" />
-            <Img
-              src="../../../public/Royal Television.png"
-              alt="sponsors logo"
-            />
+            <Img src="../../../Angel Tv.png" alt="sponsors logo" />
+            <Img src="../../../Lawson Herbal.png" alt="sponsors logo" />
+            <Img src="../../../Royal Television.png" alt="sponsors logo" />
 
+            <Img src="../../../Experience Africa.png" alt="sponsors logo" />
+            <Img src="../../../Daily Guide.png" alt="sponsors logo" />
             <Img
-              src="../../../public/Experience Africa.png"
+              src="../../../Graphic communications group.png"
               alt="sponsors logo"
             />
-            <Img src="../../../public/Daily Guide.png" alt="sponsors logo" />
-            <Img
-              src="../../../public/Graphic communications group.png"
-              alt="sponsors logo"
-            />
-            <Img src="../../../public/Gh Times.png" alt="sponsors logo" />
+            <Img src="../../../Gh Times.png" alt="sponsors logo" />
           </ImgBox>
         </StyledSpon>
         <StyledSpon>
           <H2>Partners</H2>
           <ImgBox>
             <Img
-              src="../../../public/Ministry-Of-Foreign-Affairs-and-Regional-Integration.png"
+              src="../../../Ministry-Of-Foreign-Affairs-and-Regional-Integration.png"
               alt="sponsors logo"
             />
             <Img
-              src="../../../public/Ministry of National Security.png"
+              src="../../../Ministry of National Security.png"
               alt="sponsors logo"
             />
-            <Img src="../../../public/culture.png" alt="sponsors logo" />
+            <Img src="../../../culture.png" alt="sponsors logo" />
 
-            <Img src="../../../public/pngwing.com.png" alt="sponsors logo" />
+            <Img src="../../../pngwing.com.png" alt="sponsors logo" />
 
-            <Img src="../../../public/Logos-7.png" alt="sponsors logo" />
+            <Img src="../../../Logos-7.png" alt="sponsors logo" />
 
-            <Img src="../../../public/Musigha.png" alt="sponsors logo" />
+            <Img src="../../../Musigha.png" alt="sponsors logo" />
             <Img
-              src="../../../public/National Ambulance service.png"
+              src="../../../National Ambulance service.png"
               alt="sponsors logo"
             />
-            <Img
-              src="../../../public/Ghana Immigration.png"
-              alt="sponsors logo"
-            />
+            <Img src="../../../Ghana Immigration.png" alt="sponsors logo" />
           </ImgBox>
         </StyledSpon>
       </Container>

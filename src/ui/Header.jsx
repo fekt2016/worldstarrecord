@@ -15,7 +15,7 @@ const StyledHeader = styled.header`
           rgba(0, 0, 0, 0.52),
           rgba(0, 0, 0, 0.73)
         ),
-        url('../../public/LAUNCHING PICTURE.jpg');
+        url('../../public/image18.jpg');
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;

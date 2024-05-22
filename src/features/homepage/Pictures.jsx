@@ -1,29 +1,34 @@
 import styled from 'styled-components'
 import Section from '../../ui/Section'
+import { devicesMax } from '../../styles/BreakPoint'
 
 const PicContainer = styled.div`
-  /* display: flex;
-  justify-content: space-around;
-  align-items: center; */
-  /* padding: 0 4rem; */
-  height: 100rem;
+  /* height: 100rem; */
   padding: 4rem;
-
   display: flex;
+
+  @media ${devicesMax.md} {
+    flex-direction: column;
+  }
 `
 const Left = styled.div`
   flex: 1;
-
   display: flex;
   flex-direction: column;
-  height: 100%;
+
+  @media ${devicesMax.md} {
+    flex-basis: 100rem;
+  }
 `
 const Right = styled.div`
   flex: 1;
 
   display: flex;
   flex-direction: column;
-  height: 100%;
+
+  @media ${devicesMax.md} {
+    flex-basis: 100rem;
+  }
 `
 const One = styled.div`
   flex: 1;
@@ -35,6 +40,7 @@ const One = styled.div`
   border-radius: 7px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   margin: 1rem;
+  flex-basis: 40rem;
 `
 const Two = styled.div`
   border: 1rem solid var(--color-grey-100);
@@ -42,6 +48,7 @@ const Two = styled.div`
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   margin: 1rem;
   flex: 1;
+  flex-basis: 40rem;
 `
 const Three = styled.div`
   background-image: url('../../../world2.jpeg');
@@ -53,6 +60,7 @@ const Three = styled.div`
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   margin: 1rem;
   flex: 1;
+  flex-basis: 40rem;
 `
 const Four = styled.div`
   border: 1rem solid var(--color-grey-100);
@@ -60,11 +68,8 @@ const Four = styled.div`
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   margin: 1rem;
   flex: 1;
+  flex-basis: 40rem;
 `
-
-// const Section = styled.section`
-//   background-color: gold;
-// `
 
 function Pictures() {
   return (

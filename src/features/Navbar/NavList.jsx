@@ -1,7 +1,7 @@
 /* eslint react/prop-types: 0 */
 
 import { NavLink } from 'react-router-dom'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
 const StyledLink = styled(NavLink)`
   &:link,
@@ -15,9 +15,13 @@ const StyledLink = styled(NavLink)`
     position: relative;
     color: ${(props) => props.mycolor};
   }
-  &.active {
-    color: gold;
-  }
+  /* &.active {
+    ${(props) =>
+      props.active &&
+      css`
+        color: gold;
+      `};
+  } */
 
   &::before {
     content: '';
