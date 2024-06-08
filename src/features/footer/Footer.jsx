@@ -1,3 +1,4 @@
+/* eslint react/prop-types: 0 */
 import styled, { css } from 'styled-components'
 import NavList from '../Navbar/NavList'
 import NavItem from '../Navbar/NavItem'
@@ -115,19 +116,11 @@ function Footer() {
 
       <NavBox>
         <StyledNav>
-          <NavItem>
-            <NavList text={'home'} mycolor="var(--color-black-900)" />
-            <NavList text={'event'} mycolor="var(--color-black-900)" />
-            <NavList text={'about'} mycolor="var(--color-black-900)" />
-            <NavList text={'contact'} mycolor="var(--color-black-900)" />
+          <NavItem type={'footer'}>
+            <NavList text={'home'} mycolor={'var(--color-black-900)'} />
           </NavItem>
         </StyledNav>
-        {/* <NavItem>
-          <NavList text={'Terms of service'} mycolor="var(--color-white-100)" />
-          <NavList text={'Privacy policy '} mycolor="var(--color-white-100)" />
-          <NavList text={'Cookie policy'} mycolor="var(--color-white-100)" />
-          <NavList text={'Refund policy'} mycolor="var(--color-white-100)" />
-        </NavItem> */}
+
         <Social>
           <FacebookIcon />
           <TwitterIcon />

@@ -15,13 +15,13 @@ const StyledLink = styled(NavLink)`
     position: relative;
     color: ${(props) => props.mycolor};
   }
-  /* &.active {
+  &.active {
     ${(props) =>
-      props.active &&
+      props.type === 'home' &&
       css`
         color: gold;
-      `};
-  } */
+      `}
+  }
 
   &::before {
     content: '';

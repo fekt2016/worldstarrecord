@@ -1,21 +1,26 @@
 import styled, { css } from 'styled-components'
 
 const NavItem = styled.ul`
-  flex: 3;
   display: flex;
   justify-content: space-evenly;
-  transition: all 0.3s ease;
-
   ${(props) =>
-    props.show &&
+    props.type === 'home' &&
     css`
-      width: 100%;
-      display: flex;
-      align-items: flex-start;
-      flex-direction: column;
-      gap: 15px;
-      margin: 15px;
+      flex: 3;
+
+      transition: all 0.3s ease;
     `}
+  ${(props) =>
+    props.type === 'footer' &&
+    css`
+      justify-content: space-evenly;
+    `}
+    ${(props) =>
+      props.type === 'small' &&
+      css`
+        flex-direction: column;
+        height: 100%;
+      `}
 `
 
 export default NavItem

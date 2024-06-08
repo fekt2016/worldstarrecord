@@ -15,7 +15,7 @@ const StyledHeader = styled.header`
           rgba(0, 0, 0, 0.52),
           rgba(0, 0, 0, 0.73)
         ),
-        url('../../public/image18.jpg');
+        url('../../image18.jpg');
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
@@ -26,7 +26,7 @@ const StyledHeader = styled.header`
 
       @media ${devicesMax.md} {
         height: 100vh;
-        padding-top: 8rem;
+        /* padding-top: 8rem; */
       }
     `}
 `
@@ -41,7 +41,7 @@ const Heading = styled.h1`
     font-size: 8rem;
   }
   @media ${devicesMax.sm} {
-    font-size: 5rem;
+    font-size: 3rem;
   }
 `
 const TextBox = styled.div`
@@ -82,6 +82,10 @@ const BtnBox = styled.div`
   display: flex;
   gap: 50px;
   justify-content: flex-start;
+
+  @media ${devicesMax.sm} {
+    padding-left: 5rem;
+  }
 `
 function Header({ type }) {
   return (

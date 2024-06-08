@@ -1,152 +1,165 @@
 /* eslint react/prop-types: 0 */
-import { useEffect, useState } from 'react'
+
 import NavList from './NavList'
 import NavItem from './NavItem'
-import { devicesMax } from '../../styles/BreakPoint'
-
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai'
-// import Sign from './SIgn'
 import styled, { css } from 'styled-components'
-// import { Link } from 'react-router-dom'
-
-// import { FaShoppingCart } from 'react-icons/fa'
+import { useEffect, useState } from 'react'
+import { devicesMax } from '../../styles/BreakPoint'
 
 const NavStyle = styled.nav`
   display: flex;
+  flex-direction: column;
   width: 100vw;
   align-items: center;
-  padding: 2rem;
+  padding: 1rem 2rem;
+  padding-right: 3rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease;
-
-  ${(props) =>
-    props.show &&
-    css`
-      display: flex;
-      align-items: flex-start;
-      flex-direction: column;
-    `}
 `
 
 const NavCollapse = styled.div`
   flex: 1;
-
   transition: all 0.3s ease;
 
-  ${(props) =>
-    props.show &&
-    css`
-      width: 100%;
-    `}
+  @media ${devicesMax.md} {
+    display: none;
+  }
 `
-const NavBox = styled.div`
+const BigContainer = styled.div`
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+`
+const SmallContainer = styled.div`
+  opacity: 0;
+  height: 0;
+  transition: all 0.4s ease-in;
 
-  transition: all 0.3s ease;
   ${(props) =>
-    props.show &&
+    props.isOpen === true &&
     css`
-      width: 100%;
-      flex-direction: column;
+      opacity: 1;
+      height: 20rem;
     `}
 `
 const NavLogo = styled.div`
   flex: 1;
-  @media ${devicesMax.md} {
-    padding: 0 2rem;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex: none;
-  }
 `
 const Img = styled.img`
   height: 4rem;
 `
 const MenuIcon = styled(AiOutlineMenu)`
   font-size: 2.3rem;
+  display: none;
   cursor: pointer;
+  color: var(--color-white-100);
+  @media ${devicesMax.md} {
+    display: block;
+  }
 `
 const CloseIcon = styled(AiOutlineClose)`
   font-size: 2.3rem;
   cursor: pointer;
+  display: none;
+  color: var(--color-white-100);
+  @media ${devicesMax.md} {
+    display: block;
+  }
 `
 function NavBar({ type }) {
-  const [showElement, setShowElement] = useState({
-    navbarNav: true,
-    hamburgerIcon: false,
-    closeIcon: false,
-    navOpened: false,
-  })
+  const [isOpen, setIsOpen] = useState(false)
+  const [width, setWidth] = useState(window.innerWidth)
 
   useEffect(() => {
-    window.onresize = () => {
-      let windowWidth = window.innerWidth
+    if (width > 886) setIsOpen(false)
+  }, [width])
 
-      windowWidth > 850 &&
-        setShowElement({ navbarNav: true, hamburgerIcon: false })
-      windowWidth < 885 &&
-        setShowElement({ navbarNav: false, hamburgerIcon: true })
-    }
+  useEffect(() => {
+    const handleResize = () => setWidth(window.innerWidth)
+    window.addEventListener('resize', handleResize)
+    return () => window.removeEventListener('resize', handleResize)
   }, [])
-  const openNav = () => {
-    setShowElement({
-      navbarNav: true,
-      hamburgerIcon: false,
-      closeIcon: true,
-      navOpened: true,
-    })
-  }
-  const closeNav = () => {
-    setShowElement({
-      navbarNav: false,
-      hamburgerIcon: true,
-      closeIcon: false,
-      navOpened: false,
-    })
-  }
 
   return (
-    <NavStyle show={showElement.navOpened}>
-      <NavLogo>
-        <a href="#" className="navbar-brand">
-          <Img src="../../../LOGO.jpeg" alt="logo" />
-        </a>
-        {showElement.hamburgerIcon && <MenuIcon onClick={openNav} />}
-        {showElement.closeIcon && <CloseIcon onClick={closeNav} />}
-      </NavLogo>
-      <NavCollapse show={showElement.navOpened}>
-        {showElement.navbarNav ? (
-          <NavBox show={showElement.navOpened}>
-            <NavItem show={showElement.navOpened}>
-              <NavList to="/" text={'home'} active="active" />
-              <NavList
-                to="about"
-                text={'about us'}
-                mycolor={type === 'home' ? 'var(--color-white-100)' : 'black'}
-              />
-              <NavList
-                to="event"
-                text={'events'}
-                mycolor={type === 'home' ? 'var(--color-white-100)' : 'black'}
-              />
-              <NavList
-                to="gallery"
-                text={'gallery'}
-                mycolor={type === 'home' ? 'var(--color-white-100)' : 'black'}
-              />
-              <NavList
-                to="contact"
-                text={'contact'}
-                mycolor={type === 'home' ? 'var(--color-white-100)' : 'black'}
-              />
-            </NavItem>
-          </NavBox>
-        ) : null}
-      </NavCollapse>
+    <NavStyle>
+      <BigContainer>
+        <NavLogo>
+          <a href="#" className="navbar-brand">
+            <Img src="../../../LOGO.jpeg" alt="logo" />
+          </a>
+        </NavLogo>
+
+        <NavCollapse>
+          <NavItem type={type}>
+            <NavList
+              to="/"
+              text={'home'}
+              mycolor={type === 'home' ? 'gold' : 'var(--color-black-900)'}
+            />
+            <NavList
+              to="about"
+              text={'about us'}
+              mycolor={type === 'home' && 'var(--color-white-100)'}
+            />
+            <NavList
+              to="event"
+              text={'events'}
+              mycolor={type === 'home' && 'var(--color-white-100)'}
+            />
+            <NavList
+              to="gallery"
+              text={'gallery'}
+              mycolor={type === 'home' && 'var(--color-white-100)'}
+            />
+            <NavList
+              to="contact"
+              text={'contact'}
+              mycolor={type === 'home' && 'var(--color-white-100)'}
+            />
+          </NavItem>
+        </NavCollapse>
+
+        {!isOpen ? (
+          <MenuIcon
+            onClick={() => {
+              setIsOpen(true)
+            }}
+          />
+        ) : (
+          <CloseIcon
+            onClick={() => {
+              setIsOpen(false)
+            }}
+          />
+        )}
+      </BigContainer>
+      <SmallContainer isOpen={isOpen}>
+        <NavItem type={'small'}>
+          <NavList to="home" text={'home'} mycolor={'var(--color-white-100)'} />
+          <NavList
+            to="about"
+            text={'about us'}
+            mycolor={'var(--color-white-100)'}
+          />
+          <NavList
+            to="event"
+            text={'events'}
+            mycolor={'var(--color-white-100)'}
+          />
+          <NavList
+            to="gallery"
+            text={'gallery'}
+            mycolor={'var(--color-white-100)'}
+          />
+          <NavList
+            to="contact"
+            text={'contact'}
+            mycolor={'var(--color-white-100)'}
+          />
+        </NavItem>
+      </SmallContainer>
     </NavStyle>
   )
 }
