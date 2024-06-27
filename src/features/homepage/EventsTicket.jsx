@@ -1,41 +1,62 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import Section from '../../ui/Section'
 import { devicesMax } from '../../styles/BreakPoint'
-// import { devicesMax } from '../../styles/BreakPoint'
+import { Link } from 'react-router-dom'
 
 const StyledEvent = styled.div`
   width: 100%;
   display: flex;
-  gap: 20px;
+  gap: 40px;
   justify-content: space-around;
   align-items: center;
-
-  border-radius: 10px;
 
   @media ${devicesMax.md} {
     flex-direction: column;
   }
 `
 const EventCard = styled.div`
-  flex: 1;
-`
+  height: 600px;
+  border-radius: 10px;
 
-const Img = styled.img`
-  width: 100%;
+  ${(props) =>
+    props.event === 'prev' &&
+    css`
+      background-image: url('../../../ADONKO 2 FINGERS.jpg');
+    `}
+  ${(props) =>
+    props.event === 'pass' &&
+    css`
+      background-image: url('../../../public/2012event.jpeg');
+    `}
+    ${(props) =>
+      props.event === 'cur' &&
+      css`
+        background-image: url('../../../public/upcoming.jpeg');
+      `}
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size:cover;
+  flex: 1;
+  transition: all 0.8s;
+  &:hover {
+    box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+    transform: scale(1.1);
+  }
 `
 
 function EventsTicket() {
   return (
     <Section type="event">
       <StyledEvent>
-        <EventCard>
-          <Img src="../../../poster3.jpeg" alt="poster for concert" />
+        <EventCard event={'pass'}>
+          <Link></Link>
         </EventCard>
-        <EventCard>
-          <Img src="../../../poster1.jpeg" alt="poster for concert" />
+        <EventCard event={'prev'}>
+          <Link></Link>
         </EventCard>
-        <EventCard>
-          <Img src="../../../poster5.jpeg" alt="poster for concert" />
+
+        <EventCard event={'cur'}>
+          <Link></Link>
         </EventCard>
       </StyledEvent>
     </Section>

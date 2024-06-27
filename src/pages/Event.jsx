@@ -1,4 +1,6 @@
+import { useState } from 'react'
 import styled from 'styled-components'
+import Video from '../ui/Video'
 
 const EventBox = styled.div`
   padding: 8rem;
@@ -10,19 +12,74 @@ const EventBox = styled.div`
   align-items: flex-start;
 `
 
-const Img = styled.img`
-  height: 70rem;
-  width: 45%;
+const Posters = styled.div`
+  width: 100%;
+
+  display: flex;
+
+  justify-content: space-around;
+  gap: 100px;
 `
 
+const PassEvent = styled.div`
+  height: 20rem;
+  flex: 1;
+  background-image: url('../../2012event.jpeg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+`
+const PrevEvent = styled.div`
+  flex: 1;
+  background-image: url('../../ADONKO 2 FINGERS.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+`
+const CurEvent = styled.div`
+  flex: 1;
+  background-image: url('../../upcoming.jpeg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+`
+
+const PassDetail = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`
+const PrevDetail = styled.div`
+  width: 100%;
+  height: 100rem;
+`
+const CurDetail = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`
 function Event() {
+  const [tab, setTab] = useState(0)
+
   return (
     <EventBox>
-      <Img src="../../poster1.jpeg" alt="world star records poster" />
-      <Img src="../../poster3.jpeg" alt="world star records poster" />
-      <Img src="../../poster.jpeg" alt="world star records poster" />
-      <Img src="../../poster2.jpeg" alt="world star records poster" />
-      <Img src="../../poster5.jpeg" alt="world star records poster" />
+      <Posters>
+        <PassEvent onClick={() => setTab(0)}></PassEvent>
+        <PrevEvent onClick={() => setTab(1)}></PrevEvent>
+        <CurEvent onClick={() => setTab(2)}></CurEvent>
+      </Posters>
+      {tab === 0 && <PassDetail>Event detail not available yet</PassDetail>}
+      {tab === 1 && (
+        <PrevDetail>
+          <Video code={'tRmqK1lW_k4&'} />
+        </PrevDetail>
+      )}
+      {tab === 2 && <CurDetail>Bahamas event date coming soon!!!!</CurDetail>}
     </EventBox>
   )
 }

@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import styled, { css } from 'styled-components'
 
 const sizes = {
@@ -36,7 +37,7 @@ const variation = {
   `,
 }
 
-const Button = styled.button`
+const Button = styled(Link)`
   border: none;
   border-radius: 7px;
   text-transform: capitalize;

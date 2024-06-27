@@ -6,7 +6,7 @@ import Header from '../ui/Header'
 function AppLayout() {
   return (
     <>
-      <Header />
+      <Header type="appLayout" />
       <Main>
         <Outlet />
       </Main>

@@ -3,9 +3,11 @@
 import NavList from './NavList'
 import NavItem from './NavItem'
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai'
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 import { useEffect, useState } from 'react'
 import { devicesMax } from '../../styles/BreakPoint'
+import SmallNav from '../../ui/SmallNav'
+import { Link } from 'react-router-dom'
 
 const NavStyle = styled.nav`
   display: flex;
@@ -32,18 +34,7 @@ const BigContainer = styled.div`
   justify-content: space-between;
   align-items: center;
 `
-const SmallContainer = styled.div`
-  opacity: 0;
-  height: 0;
-  transition: all 0.4s ease-in;
 
-  ${(props) =>
-    props.isOpen === true &&
-    css`
-      opacity: 1;
-      height: 20rem;
-    `}
-`
 const NavLogo = styled.div`
   flex: 1;
 `
@@ -54,7 +45,10 @@ const MenuIcon = styled(AiOutlineMenu)`
   font-size: 2.3rem;
   display: none;
   cursor: pointer;
-  color: var(--color-white-100);
+  color: ${(props) =>
+    props.type === 'home'
+      ? 'var(--color-white-100)'
+      : 'var(--color-black-900)'};
   @media ${devicesMax.md} {
     display: block;
   }
@@ -63,7 +57,10 @@ const CloseIcon = styled(AiOutlineClose)`
   font-size: 2.3rem;
   cursor: pointer;
   display: none;
-  color: var(--color-white-100);
+  color: ${(props) =>
+    props.type === 'home'
+      ? 'var(--color-white-100)'
+      : 'var(--color-black-900)'};
   @media ${devicesMax.md} {
     display: block;
   }
@@ -86,9 +83,9 @@ function NavBar({ type }) {
     <NavStyle>
       <BigContainer>
         <NavLogo>
-          <a href="#" className="navbar-brand">
+          <Link to={'/'} className="navbar-brand">
             <Img src="../../../LOGO.jpeg" alt="logo" />
-          </a>
+          </Link>
         </NavLogo>
 
         <NavCollapse>
@@ -104,7 +101,7 @@ function NavBar({ type }) {
               mycolor={type === 'home' && 'var(--color-white-100)'}
             />
             <NavList
-              to="event"
+              to="events"
               text={'events'}
               mycolor={type === 'home' && 'var(--color-white-100)'}
             />
@@ -123,43 +120,21 @@ function NavBar({ type }) {
 
         {!isOpen ? (
           <MenuIcon
+            type={type}
             onClick={() => {
               setIsOpen(true)
             }}
           />
         ) : (
           <CloseIcon
+            type={type}
             onClick={() => {
               setIsOpen(false)
             }}
           />
         )}
       </BigContainer>
-      <SmallContainer isOpen={isOpen}>
-        <NavItem type={'small'}>
-          <NavList to="home" text={'home'} mycolor={'var(--color-white-100)'} />
-          <NavList
-            to="about"
-            text={'about us'}
-            mycolor={'var(--color-white-100)'}
-          />
-          <NavList
-            to="event"
-            text={'events'}
-            mycolor={'var(--color-white-100)'}
-          />
-          <NavList
-            to="gallery"
-            text={'gallery'}
-            mycolor={'var(--color-white-100)'}
-          />
-          <NavList
-            to="contact"
-            text={'contact'}
-            mycolor={'var(--color-white-100)'}
-          />
-        </NavItem>
-      </SmallContainer>
+      <SmallNav isOpen={isOpen} pageType={type} />
     </NavStyle>
   )
 }

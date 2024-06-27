@@ -20,7 +20,7 @@ function App() {
           <Route index element={<HomePage />} />
           <Route element={<AppLayout />}>
             <Route path="about" element={<About />} />
-            <Route path="event" element={<Event />} />
+            <Route path="events" element={<Event />} />
             <Route path="contact" element={<Contact />} />
             <Route path="gallery" element={<Gallery />} />
             {/* <Route path="event/:event/checkout" element={<Checkout />} /> */}

@@ -5,6 +5,7 @@ import NavBar from '../features/Navbar/NavBar'
 import Button from '../ui/Button'
 
 const StyledHeader = styled.header`
+  margin-bottom: 6rem;
   ${(props) =>
     props.type === 'home' &&
     css`
@@ -101,8 +102,10 @@ function Header({ type }) {
             </P>
           </TextBox>
           <BtnBox>
-            <Button size="large">gallery</Button>
-            <Button size="large" variation="secoundary">
+            <Button to={'gallery'} size="large">
+              gallery
+            </Button>
+            <Button to={'events'} size="large" variation="secoundary">
               events
             </Button>
           </BtnBox>

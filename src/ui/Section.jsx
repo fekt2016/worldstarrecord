@@ -8,7 +8,7 @@ const Section = styled.section`
   ${(props) =>
     props.type === 'event' &&
     css`
-    margin: 6rem;
+    margin: 0rem 6rem;
       /* padding: 2rem 10rem; */
 
       /* @media ${devicesMax.md} {
