@@ -1,7 +1,7 @@
-import styled, { css } from 'styled-components'
-import Section from '../../ui/Section'
-import { devicesMax } from '../../styles/BreakPoint'
-import { Link } from 'react-router-dom'
+import styled, { css } from "styled-components";
+import Section from "../../ui/Section";
+import { devicesMax } from "../../styles/BreakPoint";
+import { Link } from "react-router-dom";
 
 const StyledEvent = styled.div`
   width: 100%;
@@ -13,54 +13,54 @@ const StyledEvent = styled.div`
   @media ${devicesMax.md} {
     flex-direction: column;
   }
-`
+`;
 const EventCard = styled.div`
   height: 600px;
   border-radius: 10px;
 
   ${(props) =>
-    props.event === 'prev' &&
+    props.event === "prev" &&
     css`
-      background-image: url('../../../ADONKO 2 FINGERS.jpg');
+      background-image: url("../../../ADONKO 2 FINGERS.jpg");
     `}
   ${(props) =>
-    props.event === 'pass' &&
+    props.event === "pass" &&
     css`
-      background-image: url('../../../2012event.jpeg');
+      background-image: url("../../../2012event.jpeg");
     `}
     ${(props) =>
-      props.event === 'cur' &&
-      css`
-        background-image: url('../../../upcoming.jpeg');
-      `}
+    props.event === "cur" &&
+    css`
+      background-image: url("../../../GHASPAIN.jpg");
+    `}
   background-position: center;
   background-repeat: no-repeat;
-  background-size:cover;
+  background-size: cover;
   flex: 1;
   transition: all 0.8s;
   &:hover {
     box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
     transform: scale(1.1);
   }
-`
+`;
 
 function EventsTicket() {
   return (
     <Section type="event">
       <StyledEvent>
-        <EventCard event={'pass'}>
+        <EventCard event={"pass"}>
           <Link></Link>
         </EventCard>
-        <EventCard event={'prev'}>
+        <EventCard event={"prev"}>
           <Link></Link>
         </EventCard>
 
-        <EventCard event={'cur'}>
+        <EventCard event={"cur"}>
           <Link></Link>
         </EventCard>
       </StyledEvent>
     </Section>
-  )
+  );
 }
 
-export default EventsTicket
+export default EventsTicket;
