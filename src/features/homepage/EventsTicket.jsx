@@ -26,12 +26,12 @@ const EventCard = styled.div`
   ${(props) =>
     props.event === 'pass' &&
     css`
-      background-image: url('../../../public/2012event.jpeg');
+      background-image: url('../../../2012event.jpeg');
     `}
     ${(props) =>
       props.event === 'cur' &&
       css`
-        background-image: url('../../../public/upcoming.jpeg');
+        background-image: url('../../../upcoming.jpeg');
       `}
   background-position: center;
   background-repeat: no-repeat;

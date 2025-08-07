@@ -1,6 +1,19 @@
 import { useState } from 'react'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import Video from '../ui/Video'
+
+const styles = css`
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.4s;
+  flex: 1;
+  &:hover {
+    transform: translateY(10px);
+  }
+`
 
 const EventBox = styled.div`
   padding: 8rem;
@@ -23,28 +36,17 @@ const Posters = styled.div`
 
 const PassEvent = styled.div`
   height: 20rem;
-  flex: 1;
+
   background-image: url('../../2012event.jpeg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  cursor: pointer;
+  ${styles}
 `
 const PrevEvent = styled.div`
-  flex: 1;
   background-image: url('../../ADONKO 2 FINGERS.jpg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  cursor: pointer;
+  ${styles}
 `
 const CurEvent = styled.div`
-  flex: 1;
   background-image: url('../../upcoming.jpeg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  cursor: pointer;
+  ${styles}
 `
 
 const PassDetail = styled.div`
@@ -63,17 +65,38 @@ const CurDetail = styled.div`
   justify-content: center;
   align-items: center;
 `
+const Active = styled.div`
+  width: 50%;
+  height: 5px;
+  background-color: var(--color-grey-300);
+  position: absolute;
+  bottom: -20px;
+  left: 30%;
+  transform: translate(-50%);
+  border-radius: 100px;
+  transform: skew(45deg);
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+`
 function Event() {
   const [tab, setTab] = useState(0)
 
   return (
     <EventBox>
       <Posters>
-        <PassEvent onClick={() => setTab(0)}></PassEvent>
-        <PrevEvent onClick={() => setTab(1)}></PrevEvent>
-        <CurEvent onClick={() => setTab(2)}></CurEvent>
+        <PassEvent active={tab} onClick={() => setTab(0)}>
+          {tab === 0 && <Active></Active>}
+        </PassEvent>
+        <PrevEvent onClick={() => setTab(1)}>
+          {tab === 1 && <Active></Active>}
+        </PrevEvent>
+        <CurEvent onClick={() => setTab(2)}>
+          {tab === 2 && <Active></Active>}
+        </CurEvent>
       </Posters>
-      {tab === 0 && <PassDetail>Event detail not available yet</PassDetail>}
+      {tab === 0 && (
+        <PassDetail>Ghana 2012 detail not available yet</PassDetail>
+      )}
       {tab === 1 && (
         <PrevDetail>
           <Video code={'tRmqK1lW_k4&'} />
