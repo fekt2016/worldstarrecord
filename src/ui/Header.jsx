@@ -57,7 +57,7 @@ function Header({ type }) {
           <HeroContainer>
             <Badge $tone="accent">Aug 29 - 31, 2026</Badge>
             <HeroTitle as="h1" $size="hero" $weight="black" $gradient>
-              WorldStar Record Festival
+              WorldStar Record
             </HeroTitle>
             <HeroSubtitle $size="lg" $mono>
               Sound, rhythm, and global culture converging in Accra.

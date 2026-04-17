@@ -1,6 +1,7 @@
 import EventsTicket from '../features/homepage/EventsTicket';
 import Pictures from '../features/homepage/Pictures';
 import Sponsor from '../features/homepage/Sponsor';
+import UpcomingEvent from '../features/homepage/UpcomingEvent';
 import Footer from '../features/footer/Footer';
 import Header from '../ui/Header';
 import styled, { keyframes } from 'styled-components';
@@ -9,6 +10,7 @@ function HomePage() {
   return (
     <PageTransition>
       <Header type="home" />
+      <UpcomingEvent />
       <EventsTicket />
       <Pictures />
       <Sponsor />
