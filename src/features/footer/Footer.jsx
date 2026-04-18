@@ -169,9 +169,9 @@ function Footer() {
     <StyledFooter>
       <FooterGrid>
         <BrandColumn>
-          <BrandLogo src="/LOGO.jpeg" alt="WorldStar Record logo" />
+          <BrandLogo src="/LOGO.jpeg" alt="World Star Records logo" />
           <Text $size="sm">
-            WorldStar Record connects artists, fans, and culture through
+            World Star Records connects artists, fans, and culture through
             high-energy festival experiences.
           </Text>
         </BrandColumn>
@@ -232,7 +232,7 @@ function Footer() {
 
       <FooterBottom>
         <Text $size="xs" $mono>
-          © {year} WorldStar Record. All rights reserved.
+          © {year} World Star Records. All rights reserved.
         </Text>
         <Text $size="xs" $mono>
           Developed by Eazworld.

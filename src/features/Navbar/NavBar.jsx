@@ -259,8 +259,8 @@ function NavBar({ type }) {
         aria-label={type === 'home' ? 'Homepage navigation' : 'Site navigation'}
       >
         <NavInner>
-          <BrandLink to="/" aria-label="WorldStar Record home">
-            <BrandLogo src="/LOGO.jpeg" alt="WorldStar Record logo" />
+          <BrandLink to="/" aria-label="World Star Records home">
+            <BrandLogo src="/LOGO.jpeg" alt="World Star Records logo" />
           </BrandLink>
 
           <DesktopLinks>

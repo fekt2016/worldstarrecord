@@ -118,7 +118,7 @@ function Gallery() {
         <Header>
           <Badge $tone="accent">Festival Gallery</Badge>
           <Text as="h1" $size="3xl" $weight="black">
-            Moments That Defined WorldStar
+            Moments That Defined World Star Records
           </Text>
         </Header>
 

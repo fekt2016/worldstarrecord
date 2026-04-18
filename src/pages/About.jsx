@@ -7,7 +7,7 @@ const storySections = [
   {
     id: 'about-story',
     title: 'Built for artists, rooted in culture',
-    body: 'WorldStar Record started in 2008 to support emerging musicians through artist development, brand strategy, and high-impact live events.',
+    body: 'World Star Records started in 2008 to support emerging musicians through artist development, brand strategy, and high-impact live events.',
     image: '/world3.jpeg',
   },
   {
@@ -21,7 +21,7 @@ const storySections = [
 const timeline = [
   {
     year: '2008',
-    text: 'WorldStar Record launches artist development and peace campaign activations.',
+    text: 'World Star Records launches artist development and peace campaign activations.',
   },
   {
     year: '2012',
@@ -33,7 +33,7 @@ const timeline = [
   },
   {
     year: '2026',
-    text: 'Next-generation WorldStar experience introduces immersive fan and creator zones.',
+    text: 'Next-generation World Star Records experience introduces immersive fan and creator zones.',
   },
 ];
 
@@ -95,9 +95,9 @@ function About() {
     <PageSection>
       <StyledContainer>
         <Header>
-          <Badge $tone="accent">About WorldStar</Badge>
+          <Badge $tone="accent">About World Star Records</Badge>
           <Text as="h1" $size="3xl" $weight="black">
-            WorldStar Record Ltd
+            World Star Records Ltd
           </Text>
         </Header>
 

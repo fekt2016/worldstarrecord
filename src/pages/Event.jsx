@@ -12,9 +12,9 @@ function Event() {
     <PageSection>
       <StyledContainer>
         <Header>
-          <Badge $tone="primary">Festival Archive</Badge>
+          <Badge $tone="accent">Live &amp; Upcoming</Badge>
           <Text as="h1" $size="3xl" $weight="black">
-            Events & Highlights
+            Events &amp; Highlights
           </Text>
         </Header>
 
@@ -126,12 +126,22 @@ const Header = styled.div`
 const TabsWrapper = styled.div`
   position: relative;
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(${eventTabs.length}, minmax(0, 1fr));
   gap: ${({ theme }) => theme.space[1]};
   padding: ${({ theme }) => theme.space[1]};
   border: 1px solid ${({ theme }) => theme.colors.borderSoft};
   border-radius: ${({ theme }) => theme.radius.full};
   background: rgba(18, 18, 38, 0.6);
+
+  @media ${({ theme }) => theme.mediaMax.md} {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    border-radius: ${({ theme }) => theme.radius.xl};
+  }
+
+  @media ${({ theme }) => theme.mediaMax.sm} {
+    grid-template-columns: 1fr;
+    border-radius: ${({ theme }) => theme.radius.xl};
+  }
 `;
 
 const SlidingIndicator = styled.span`

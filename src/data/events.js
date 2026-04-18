@@ -1,18 +1,10 @@
 export const featuredEvents = [
   {
-    id: 'wsr-peace-concert-2012',
-    name: 'WorldStar Peace Concert',
-    date: '2012 Edition',
-    venue: 'Accra, Ghana',
-    image: '/2012event.jpeg',
-    cta: '/events',
-  },
-  {
-    id: 'wsr-adonko-2020',
-    name: 'Adonko 2 Fingers Bosoe Concert',
-    date: '2020 Edition',
-    venue: 'Accra, Ghana',
-    image: '/ADONKO 2 FINGERS.jpg',
+    id: 'wsr-napoli-2026',
+    name: 'Euro-Afric International Music & Cultural Festival',
+    date: '13th June, 2026',
+    venue: 'Napoli, Italy',
+    image: '/euro-afric-napoli-2026-poster.png',
     cta: '/events',
   },
   {
@@ -23,19 +15,47 @@ export const featuredEvents = [
     image: '/GHASPAIN.jpg',
     cta: '/events',
   },
+  {
+    id: 'wsr-peace-concert-2012',
+    name: 'World Star Records Peace Concert',
+    date: '2012 Edition',
+    venue: 'Accra, Ghana',
+    image: '/2012event.jpeg',
+    cta: '/events',
+  },
 ];
 
 export const eventHighlights = [
-  { label: 'Date', value: '29 - 31 August 2026' },
-  { label: 'Venue', value: 'Accra, Ghana' },
-  { label: 'Experience', value: 'Music, Art, Culture' },
+  { label: 'Date', value: '13th June, 2026' },
+  { label: 'Venue', value: 'Napoli, Italy' },
+  { label: 'Experience', value: 'Music, Culture, Diplomacy' },
 ];
 
 export const eventTabs = [
   {
+    id: 'napoli-2026',
+    label: 'Napoli 2026 ✦',
+    title: 'Euro-Afric International Music & Cultural Festival',
+    date: '13th June, 2026 · 6:00 AM – 2:00 PM',
+    venue: 'Via Domitiana KM 3981030, Castelvolturno Ischitella, Napoli, Italy',
+    lineup: [
+      'Bessah Simons (MUSIGA President)',
+      'Nana Aboagye Dacosta',
+      'Kaakyire Kwame Appiah (Ade3emouduro)',
+      'Paa Solo & Sibo Brothers',
+      'Kofi Nti',
+      'S3nti',
+      'Animdifour Cultural Group',
+      'Odeefour Int. Band',
+    ],
+    description:
+      'The official launching of the 2026 Euro-Afric International Music & Cultural Festival in Napoli, Italy. Powered by World Star Records Ltd, Ghana Union Association Napoli, Holland Music Production, and CKO Golden Record Label USA. Theme: To Promote Cultural Diplomacy, Peace, Unity and Development Through Music.',
+    videoId: 'tRmqK1lW_k4',
+  },
+  {
     id: 'peace-concert-2012',
     label: 'Peace Concert 2012',
-    title: 'WorldStar Peace Concert',
+    title: 'World Star Records Peace Concert',
     date: '2012 Edition',
     venue: 'Accra, Ghana',
     lineup: ['Emerging Ghanaian Artists', 'Peace Campaign Voices'],

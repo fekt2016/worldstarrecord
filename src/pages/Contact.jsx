@@ -15,7 +15,7 @@ function Contact() {
         <ContentGrid>
           <InfoCard $padding="lg">
             <Text as="h2" $size="xl" $weight="bold">
-              WorldStar Record Ltd
+              World Star Records Ltd
             </Text>
             <InfoList>
               <InfoItem>

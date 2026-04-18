@@ -23,7 +23,7 @@ const merch = [
     id: 'polo',
     name: 'Official Festival Polo',
     image: '/merch-polo.jpg',
-    description: 'Front: festival graphic print · Back: WorldStar logo + theme',
+    description: 'Front: festival graphic print · Back: World Star Records logo + theme',
   },
 ];
 
@@ -38,7 +38,7 @@ function UpcomingEvent() {
         <HeaderGroup>
           <Badge $tone="accent">Upcoming Event</Badge>
           <SectionTitle id="upcoming-event-title" as="h2" $size="3xl" $weight="black">
-            Official Launching 2026
+            Official Launching 2026.
           </SectionTitle>
           <Text $size="xl" $weight="bold" style={{ color: '#f97316' }}>
             Euro-Afric International Music &amp; Cultural Festival
@@ -53,8 +53,8 @@ function UpcomingEvent() {
           {/* Poster */}
           <PosterWrap>
             <PosterImg
-              src="/lauch poster.jpeg"
-              alt="2026 Euro-Afric International Music & Cultural Festival official poster"
+              src="/euro-afric-napoli-2026-poster.png"
+              alt="2026 Euro-Afric International Music and Cultural Festival in Napoli, Italy — official launch poster with EU and African flags and featured artists"
             />
             <PosterGlow />
           </PosterWrap>

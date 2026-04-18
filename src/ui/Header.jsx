@@ -6,7 +6,8 @@ import { eventHighlights } from '../data/events';
 import NavBar from '../features/Navbar/NavBar';
 import { Badge, Button, Card, Container, Text } from './primitives';
 
-const EVENT_DATE = '2026-08-29T18:00:00.000Z';
+// June 13 2026, 6:00 AM Naples local time (UTC+2 = 04:00 UTC)
+const EVENT_DATE = '2026-06-13T04:00:00.000Z';
 
 const float = keyframes`
   0%, 100% {
@@ -55,15 +56,15 @@ function Header({ type }) {
           </HeroOrbs>
 
           <HeroContainer>
-            <Badge $tone="accent">Aug 29 - 31, 2026</Badge>
+            <Badge $tone="accent">13th June, 2026 · Napoli, Italy</Badge>
             <HeroTitle as="h1" $size="hero" $weight="black" $gradient>
-              WorldStar Record
+              World Star Records
             </HeroTitle>
             <HeroSubtitle $size="lg" $mono>
-              Sound, rhythm, and global culture converging in Accra.
+              Euro-Afric International Music &amp; Cultural Festival — Napoli, Italy.
             </HeroSubtitle>
 
-            <CountdownGrid aria-label="Countdown to WorldStar Record Festival">
+            <CountdownGrid aria-label="Countdown to Euro-Afric International Music & Cultural Festival">
               <CountCard>
                 <Text as="span" $size="2xl" $weight="bold">
                   {String(countdown.days).padStart(2, '0')}
@@ -127,8 +128,8 @@ function Header({ type }) {
           </HeroContainer>
 
           <ScrollIndicator
-            href="#homepage-events"
-            aria-label="Scroll to events section"
+            href="#upcoming-event"
+            aria-label="Scroll to upcoming event section"
           >
             <FiArrowDown size={18} aria-hidden="true" />
           </ScrollIndicator>
@@ -171,8 +172,8 @@ const HeroContainer = styled(Container).attrs({ $width: 'default' })`
 `;
 
 const HeroTitle = styled(Text)`
-  max-width: 14ch;
-  text-wrap: balance;
+  white-space: nowrap;
+  text-align: center;
 `;
 
 const HeroSubtitle = styled(Text)`
