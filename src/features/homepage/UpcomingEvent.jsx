@@ -53,8 +53,8 @@ function UpcomingEvent() {
           {/* Poster */}
           <PosterWrap>
             <PosterImg
-              src="/euro-afric-napoli-2026-poster.png"
-              alt="2026 Euro-Afric International Music and Cultural Festival in Napoli, Italy — official launch poster with EU and African flags and featured artists"
+              src="/euro-afric-2026-flyer.jpg"
+              alt="2026 Euro-Afric International Music and Cultural Festival flyer — Napoli, Italy official launch artwork"
             />
             <PosterGlow />
           </PosterWrap>

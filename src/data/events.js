@@ -4,7 +4,7 @@ export const featuredEvents = [
     name: 'Euro-Afric International Music & Cultural Festival',
     date: '13th June, 2026',
     venue: 'Napoli, Italy',
-    image: '/euro-afric-napoli-2026-poster.png',
+    image: '/euro-afric-2026-flyer.jpg',
     cta: '/events',
   },
   {
