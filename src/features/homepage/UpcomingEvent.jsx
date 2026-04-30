@@ -4,10 +4,13 @@ import { Badge, Button, Container, Text } from '../../ui/primitives';
 const artists = [
   { name: 'Bessah Simons', role: 'MUSIGA President' },
   { name: 'Nana Aboagye Dacosta', role: 'Nana Gyinadu Kuffour II' },
-  { name: 'Kaakyire Kwame Appiah', role: 'Ade3emouduro' },
+  { name: 'Kaakyire Kwame Appiah', role: 'Nana Ofeismere3 Ade3emouduro' },
   { name: 'Paa Solo', role: 'Sibo Brothers' },
-  { name: 'Kofi Nti', role: 'Featured Artist' },
+  { name: 'Obourba Kofisei', role: 'Featured Artist' },
+  { name: 'Yaw Stone', role: 'Featured Artist' },
+  { name: 'Lyoni Jones', role: 'Featured Artist' },
   { name: 'S3nti', role: 'Featured Artist' },
+  { name: 'Nana AK', role: 'Featured Artist' },
   { name: 'Animdifour Cultural Group', role: 'Cultural Performer' },
   { name: 'Odeefour Int. Band', role: 'International Band' },
 ];
@@ -75,14 +78,14 @@ function UpcomingEvent() {
                 <InfoIcon aria-hidden="true">📅</InfoIcon>
                 <div>
                   <InfoLabel>Date</InfoLabel>
-                  <InfoValue>13th June, 2026</InfoValue>
+                  <InfoValue>29th August, 2026</InfoValue>
                 </div>
               </InfoItem>
               <InfoItem>
                 <InfoIcon aria-hidden="true">🕕</InfoIcon>
                 <div>
                   <InfoLabel>Time</InfoLabel>
-                  <InfoValue>6:00 AM – 2:00 PM</InfoValue>
+                  <InfoValue>10:00 AM – 4:00 PM</InfoValue>
                 </div>
               </InfoItem>
               <InfoItem $span>

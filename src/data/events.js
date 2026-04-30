@@ -2,7 +2,7 @@ export const featuredEvents = [
   {
     id: 'wsr-napoli-2026',
     name: 'Euro-Afric International Music & Cultural Festival',
-    date: '13th June, 2026',
+    date: '29th August, 2026',
     venue: 'Napoli, Italy',
     image: '/euro-afric-2026-flyer.jpg',
     cta: '/events',
@@ -26,7 +26,7 @@ export const featuredEvents = [
 ];
 
 export const eventHighlights = [
-  { label: 'Date', value: '13th June, 2026' },
+  { label: 'Date', value: '29th August, 2026' },
   { label: 'Venue', value: 'Napoli, Italy' },
   { label: 'Experience', value: 'Music, Culture, Diplomacy' },
 ];
@@ -36,15 +36,18 @@ export const eventTabs = [
     id: 'napoli-2026',
     label: 'Napoli 2026 ✦',
     title: 'Euro-Afric International Music & Cultural Festival',
-    date: '13th June, 2026 · 6:00 AM – 2:00 PM',
+    date: '29th August, 2026 · 10:00 AM – 4:00 PM',
     venue: 'Via Domitiana KM 3981030, Castelvolturno Ischitella, Napoli, Italy',
     lineup: [
       'Bessah Simons (MUSIGA President)',
-      'Nana Aboagye Dacosta',
-      'Kaakyire Kwame Appiah (Ade3emouduro)',
+      'Nana Aboagye Dacosta (Nana Gyinadu Kuffour II)',
+      'Kaakyire Kwame Appiah (Nana Ofeismere3 Ade3emouduro)',
       'Paa Solo & Sibo Brothers',
-      'Kofi Nti',
+      'Obourba Kofisei',
+      'Yaw Stone',
+      'Lyoni Jones',
       'S3nti',
+      'Nana AK',
       'Animdifour Cultural Group',
       'Odeefour Int. Band',
     ],
