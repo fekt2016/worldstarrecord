@@ -13,6 +13,7 @@ jobs:
   build-and-deploy:
     name: Build & Deploy
     runs-on: ubuntu-latest
+    environment: production
 
     steps:
       # 1 — Checkout the repo
@@ -34,7 +35,16 @@ jobs:
       - name: Build project
         run: npm run build
 
-      # 5 — Deploy dist/ to cPanel via FTP
+      # 5 — Verify secrets exist
+      - name: Verify FTP secrets
+        run: |
+          if [ -z "${{ secrets.FTP_SERVER }}" ]; then
+            echo "::error::FTP_SERVER secret is empty or not set"
+            exit 1
+          fi
+          echo "✅ FTP secrets found"
+
+      # 6 — Deploy dist/ to cPanel via FTP
       - name: Deploy to cPanel via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
