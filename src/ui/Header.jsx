@@ -6,8 +6,8 @@ import { eventHighlights } from '../data/events';
 import NavBar from '../features/Navbar/NavBar';
 import { Badge, Button, Card, Container, Text } from './primitives';
 
-// June 13 2026, 6:00 AM Naples local time (UTC+2 = 04:00 UTC)
-const EVENT_DATE = '2026-06-13T04:00:00.000Z';
+// August 29 2026, 10:00 AM Naples local time (UTC+2 = 08:00 UTC)
+const EVENT_DATE = '2026-08-29T08:00:00.000Z';
 
 const float = keyframes`
   0%, 100% {
