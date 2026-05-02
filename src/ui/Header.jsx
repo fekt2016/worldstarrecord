@@ -56,7 +56,7 @@ function Header({ type }) {
           </HeroOrbs>
 
           <HeroContainer>
-            <Badge $tone="accent">13th June, 2026 · Napoli, Italy</Badge>
+            <Badge $tone="accent">29th August, 2026· Napoli, Italy</Badge>
             <HeroTitle as="h1" $size="hero" $weight="black" $gradient>
               World Star Records
             </HeroTitle>
